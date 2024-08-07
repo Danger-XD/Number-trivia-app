@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia-app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="trivia-container">
+        <div class="trivia-form">
+            <select name="Type" id="trivia-type">
+                <option value="neutral" selected disabled>Select Type</option>
+                <option value="math">Math</option>
+                <option value="trivia">Trivia</option>
+                <option value="date">Date</option>
+                <option value="year">Year</option>
+            </select>
+            <input type="text" id="trivia-number">
+            <button id="genTrivia-btn">Generate</button>
+            <h2 id="number-value">55</h2>
+          <p id="gen-box">trivia will be shown here</p>
+        </div>
+        <div class="trivia-description">
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
+
+<!-- API link: http://numbersapi.com/number/type (type: trivia, math, random, date, or year) 
+ if there is only link then it will generate a fact of that number and 600 is the limit-->
