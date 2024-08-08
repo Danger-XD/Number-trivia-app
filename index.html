@@ -8,22 +8,50 @@
   </head>
   <body>
     <div class="trivia-container">
-        <div class="trivia-form">
-            <select name="Type" id="trivia-type">
-                <option value="neutral" selected disabled>Select Type</option>
-                <option value="math">Math</option>
-                <option value="trivia">Trivia</option>
-                <option value="date">Date</option>
-                <option value="year">Year</option>
-            </select>
-            <input type="text" id="trivia-number">
-            <button id="genTrivia-btn">Generate</button>
-            <h2 id="number-value">55</h2>
-          <p id="gen-box">trivia will be shown here</p>
+      <div class="trivia-description">
+        <h2>Trivia Generator App</h2>
+        <p>Welcome to the Trivia Generator App!</p>
+        <h3>How It Works:</h3>
+        <ol>
+          <li>
+            Generate Random Trivia: If no trivia type and no number is provided,
+            clicking the "Generate" button will produce a random trivia fact
+            from any category. If you provide a number and do not select a type,
+            it will generate a random trivia of that number.
+          </li>
+          <li>
+            Trivia Type Selection: If you select a trivia type but do not
+            provide a number, the app will not generate any trivia. Ensure you
+            provide a corresponding number or date for the selected trivia type.
+          </li>
+          <li>
+            Date Type Trivia: When selecting the "Date" type, make sure to enter
+            the value in the format of <bold>dd/mm</bold>. This format ensures
+            the app understands and correctly processes the date you provide.
+          </li>
+          <li>
+            Year Type Trivia: For generating trivia based on the "Year" type,
+            enter the year in the format of yyyy. This format helps the app
+            accurately retrieve facts related to the specified year.
+          </li>
+        </ol>
+      </div>
+      <div class="trivia-form">
+        <select name="Type" class="trivia-type" id="trivia-type">
+          <option value="neutral" selected>Select Type</option>
+          <option value="math">Math</option>
+          <option value="trivia">Trivia</option>
+          <option value="date">Date</option>
+          <option value="year">Year</option>
+        </select>
+        <input type="text" class="trivia-number" id="trivia-number" />
+        <button id="genTrivia-btn" class="gen-btn">Generate</button>
+        <div class="trivia-box">
+          <h2 id="number-value">Number</h2>
+          <p id="gen-box">Trivia will be shown here</p>
         </div>
-        <div class="trivia-description">
-
-        </div>
+      </div>
+      
     </div>
 
     <script src="scripts.js"></script>
